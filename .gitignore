@@ -1,0 +1,21 @@
+# environments
+.venv/
+.env
+
+# editor
+.vscode/
+.idea/
+
+# caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# macOS
+.DS_Store
+
+# generated datasets
+data
+
+# logs
+*.log
