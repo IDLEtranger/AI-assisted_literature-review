@@ -324,9 +324,6 @@ def main() -> None:
             "journal",
             "scopus_id",
             "all_sources",
-            "screen_status",
-            "screen_decision",
-            "notes",
         ]
     ]
 

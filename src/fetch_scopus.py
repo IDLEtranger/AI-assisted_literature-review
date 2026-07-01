@@ -14,10 +14,10 @@ BASE_URL = "https://api.elsevier.com/content/search/scopus"
 
 OUTPUT_PATH = Path("data/raw/scopus.csv")
 
-QUERY = 'TITLE-ABS-KEY(("active learning" OR "machine learning") AND ("systematic review" OR "evidence synthesis") AND (screening OR "study selection")) AND PUBYEAR > 2014 AND PUBYEAR < 2027'
+QUERY = 'TITLE-ABS-KEY(("soft organ*" OR "deformable organ*" OR "deformable tissue*" OR liver OR kidney OR lung OR heart) AND ("point cloud*" OR "3D point cloud*" OR "surface model*" OR mesh OR "3D surface*") AND ("non-rigid registration" OR "nonrigid registration" OR "deformable registration" OR "non-rigid matching" OR "point set registration" OR "surface registration")) AND PUBYEAR > 2015 AND PUBYEAR < 2027'
 
-PAGE_SIZE = 10
-MAX_RECORDS = 20
+PAGE_SIZE = 25
+MAX_RECORDS = 75
 
 
 def get_value(record: dict, key: str) -> str:

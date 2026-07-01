@@ -29,7 +29,7 @@ Important:
     record_id is required to match ASReview decisions back to internal records.
 """
 
-INPUT_PATH = Path("data/records_deduped.csv")
+INPUT_PATH = Path("data/records_enriched.csv")
 OUTPUT_PATH = Path("data/asreview_input.csv")
 
 

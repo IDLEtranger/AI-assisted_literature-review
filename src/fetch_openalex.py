@@ -15,18 +15,19 @@ BASE_URL = "https://api.openalex.org/works"
 OUTPUT_PATH = Path("data/raw/openalex.csv")
 
 SEARCH_QUERY = (
-    '"active learning" systematic review screening'
+    '("soft organ" OR "deformable organ" OR "deformable tissue" OR liver OR kidney OR lung OR heart) '
+    'AND ("point cloud" OR "3D point cloud" OR "surface model" OR mesh OR "3D surface") '
+    'AND ("non-rigid registration" OR "nonrigid registration" OR "deformable registration" OR "non-rigid matching" OR "point set registration" OR "surface registration")'
 )
 
 FILTER = (
-    "from_publication_date:2015-01-01,"
-    "to_publication_date:2026-12-31,"
+    "publication_year:>2015,"
+    "publication_year:<2027,"
     "has_abstract:true"
 )
 
-MAX_RECORDS = 30
-PER_PAGE = 10
-
+PER_PAGE = 25
+MAX_RECORDS = 50
 
 def normalise_doi(value: str | None) -> str:
     if not value:
